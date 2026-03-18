@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+}
+#logo {
+    margin: 10px 34px;
+}
+#logo img {
+    margin: 5px 7px;
+    height: 59px;
+}
+#navbar ul {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif;
+}
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .9;
+}
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+#navbar ul li a {
+    color: azure;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover {
+    color: black;
+    background-color: azure;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 578px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before {
+    content: "";
+    background: url(Backgroundimage.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 642px;
+    width: 100%;
+    z-index: -1;
+    opacity: .89;
+}
+#home h1 {
+    color: azure;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#home p {
+    font-size: 1.5rem;
+    color: azure;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    zoom: 90%;
+    margin: 0 auto;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+.container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Headings & Buttons */
+.h-primary {
+    font-size: 3.8rem;
+    padding: 12px;
+}
+.h-secondary {
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.center {
+    text-align: center;
+}
+.btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: green;
+    color: white;
+    margin: 20px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.btn:hover {
+    background-color: darkgreen;
+    border-color: darkgreen;
+}
+
+/* Services Section */
+#services {
+    margin: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+#services .box {
+    flex: 1 1 300px;
+    max-width: 400px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: #f9f9f9;
+    transition: transform 0.3s;
+}
+#services .box:hover {
+    transform: scale(1.05);
+}
+#services .box img {
+    width: 100%;
+    height: 260px;   /* fixed height for all images */
+    object-fit: cover; /* ensures image fills the box without distortion */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* optional: rounded corners for a cleaner look */
+}
+
+#services .box p {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Clients Section */
+#client-section {
+    height: 200px;
+}
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url(image15.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 50%;
+    z-index: -1;
+    opacity: 0.7;
+}
+.clients-item {
+    padding: 35px;
+}
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clients img {
+    height: 120px;
+}
+
+/* Contact Section */
+#contact {
+    position: relative;
+    padding: 40px 0;
+}
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(image16.jpg) no-repeat center center/cover;
+}
+#contact form {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#contact label {
+    font-size: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+#contact input:focus,
+#contact textarea:focus {
+    border-color: green;
+    outline: none;
+}
+
+/* Footer */
+footer {
+    background: rgb(16, 54, 89);
+    color: azure;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+/* Utility */
+.justify {
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0 10px;
+}
